@@ -1,0 +1,277 @@
+# .gitignore for Visual Studio WPF C# project
+
+# User-specific files
+.vscode/
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+Generated\
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
+# build/
+
+# Uncomment if you have editors/extensions which may output files or backup files into the project folder
+# *_tmp.*
+# *.bak
+# ~*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# WPF specific files
+*.appx
+*.appxbundle
+*.appxupload
+*.pri
+*.priconfig
+*.resjson
+*.appinstaller
+*.h
+*.hpp
+
+# JetBrains Rider
+.idea/
+
+# Rider project-specific files
+.idea/*
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.edmx
+*.edmx.diagram
+*.edmx.sql
+
+# StyleCop
+*.StyleCop
+
+# DotCover
+*.dcvr
+
+# Resharper
+_ReSharper*/
+*.[rR]e[Ss]harper
+
+# ASP.NET
+*.Publish.xml
+*.AzurePubxml
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget
+NuGet.Config
+NuGet.exe
+NuGetScratch/
+
+# Azure Pipelines
+azure-pipelines.yml
+
+# Code coverage results
+*.coverage
+*.coveragexml
+.coverage
+
+# Translations
+*.t4
+
+# Icon
+*.ico
+
+# Crash reports
+CrashReports/
+
+# Changelogs
+CHANGELOG.md
+
+# Configuration files
+*.config
+appsettings.json
+
+# Package directories
+node_modules/
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled node.js files
+*.lock-wscript
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Yarn Dependency directory
+.yarn/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.test
+.env.production
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt/
+
+# Bower dependency directory (https://bower.io/)
+bower_components/
+
+# Process artifacts
+pids
+*.pid
+*.seed
+
+# pm2 logs
+.pm2/logs
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Microsoft Azure Web App publish settings. Comment out if the file is to be shared.
+#*.PublishSettings
+
+# Local history for Eclipse-based IDEs
+.metadata/
+*.log
+*.tmp/
+*.bak/
+
+# Code Formatter
+formatter.xml
+
+# eclim
+.project
+
+# JBoss developer Studio
+.studio/
+
+# STS
+.springBeans
+
+# CodeLite
+*.tags
+.tag*
+
+# Referenced Projects
+*.csproj.user
+
+# Rider project-specific files
+.idea/*
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/deployment.xml
+.idea/deploymentTargetManagers.xml
+.idea/todo.xml
+.idea/encodings.xml
+.idea/externalDependencies.xml
+.idea/asset
+
+# Fody
+*.FodyWeavers.xml
+
+# EditorConfig
+.editorconfig
+
+# Visual Studio 2019
+.vs/
+.vscode/
+.vscode/*
+.idea/
+
+# MSBuild
+*.builds
+
+# PowerShell
+*.ps1
+*.ps1xml
+*.psc1
+*.psm1
+
+# Terraform
+*.tfstate
+*.tfstate.*
+
+# Azure Resource Manager
+*.azureresourcegroupdeploy.json
