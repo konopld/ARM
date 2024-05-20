@@ -1,5 +1,6 @@
 # Academic Registry Manager
 **Public Repository for TCSP project**
+*Stack: C# .NET WPF, MySQL*
 ## Current Status
 
  - MySQL Database Integration
