@@ -11,3 +11,5 @@
  - Login Form and Authentication
 	 - Passwords hashed using SHA256
 	 - Added two test users (admin with is_admin=TRUE, user with is_admin=FALSE)
+ - Main Form
+ 	 - Added "Generate Report" functionality (Generate Report button) using [DocX](https://github.com/xceedsoftware/DocX) library.
