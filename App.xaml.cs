@@ -33,6 +33,7 @@ namespace ARM
             services.AddSingleton<DatabaseService>(); // додавання сервісу бази даних
             services.AddSingleton<UserService>(); // додавання сервісу користувача
             services.AddTransient<LoginForm>(); // додавання форми для входу
+            services.AddTransient<MainForm>(); // додавання головного вікна
         }
     }
 }

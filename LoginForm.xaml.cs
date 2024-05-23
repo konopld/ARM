@@ -35,6 +35,13 @@ namespace ARM
 
                 // показ повідомлення про успішний вхід
                 MessageBox.Show($"Login successful! Welcome, {user.Username}. Admin status: {user.IsAdmin}");
+
+                // відкриваємо головне вікно
+                var mainForm = new MainForm(_dbService, _userService);
+                mainForm.Show();
+
+                // закриваємо вікно логіну
+                Close();
             }
             else
             {
