@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ARM"
         mc:Ignorable="d"
-        Title="MainForm" Height="600" Width="850" ResizeMode="CanResizeWithGrip">
+        Title="ARM" Height="600" Width="850" ResizeMode="CanResizeWithGrip">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Grid.Row="0" />
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Grid.Row="0" IsReadOnly="True"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1" Margin="10">
             <Button x:Name="downloadButton" Content="Generate Report" Width="106" Margin="5" Click="downloadButton_Click" />
+            <Button x:Name="editButton" Content="Edit" Width="51" Margin="5" Click="editButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

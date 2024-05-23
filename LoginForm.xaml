@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ARM"
         mc:Ignorable="d"
-        Title="LoginForm" Height="477" Width="832">
+        Title="ARM. Log In" Height="477" Width="832">
     <Grid VerticalAlignment="Top">
         <Label Content="Academic Registry Manager" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Height="45" Width="322" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Content="ARM" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Height="67" Width="322" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>

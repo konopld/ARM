@@ -45,6 +45,73 @@ namespace ARM
             }
         }
 
+        public DataRow? GetRecordById(string id)
+        {
+            try
+            {
+                using MySqlConnection conn = new MySqlConnection(_connectionString);
+                conn.Open();
+                string sql = "SELECT * FROM employees WHERE id = @id";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    return dt.Rows[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                // повідомлення про помилку
+                MessageBox.Show($"Error: {ex.Message}");
+                return null;
+            }
+        }
+        public void UpdateRecordById(string id, Dictionary<string, string> updatedData)
+        {
+            try
+            {
+                using MySqlConnection conn = new MySqlConnection(_connectionString);
+                conn.Open();
+                string sql = "UPDATE employees SET " +
+                             "surname = @Surname, " +
+                             "department = @Department, " +
+                             "birth_year = @BirthYear, " +
+                             "employment_year = @EmploymentYear, " +
+                             "position = @Position, " +
+                             "academic_degree = @AcademicDegree, " +
+                             "academic_title = @AcademicTitle " +
+                             "WHERE id = @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Surname", updatedData["Surname"]);
+                cmd.Parameters.AddWithValue("@Department", updatedData["Department"]);
+                cmd.Parameters.AddWithValue("@BirthYear", updatedData["BirthYear"]);
+                cmd.Parameters.AddWithValue("@EmploymentYear", updatedData["EmploymentYear"]);
+                cmd.Parameters.AddWithValue("@Position", updatedData["Position"]);
+                cmd.Parameters.AddWithValue("@AcademicDegree", updatedData["AcademicDegree"]);
+                cmd.Parameters.AddWithValue("@AcademicTitle", updatedData["AcademicTitle"]);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // повідомлення про помилку
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+
+
         // метод для аутентифікації користувача у базі даних
         public User? DatabaseAuthenticateUser(string username, string password)
         {

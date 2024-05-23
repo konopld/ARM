@@ -36,6 +36,13 @@ namespace ARM
             _userService = userService ?? throw new ArgumentNullException(nameof(userService));
 
             _dbService.FetchData(dataGrid);
+
+            var app = (App)Application.Current;
+            
+            if (!app.CurrentUser.IsAdmin) {
+                // зробити недоступним редагування даних для звичайного користувача 
+                editButton.IsEnabled = false;
+            }
         }
 
         // метод, який виконується при натисканні на кнопку завантаження
@@ -116,6 +123,12 @@ namespace ARM
 
             // зберігаємо документ
             doc.Save();
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            var editForm = new EditForm(dataGrid, _dbService);
+            editForm.Show();
         }
     }
 }

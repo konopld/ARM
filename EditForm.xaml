@@ -1,0 +1,31 @@
+﻿<Window x:Class="ARM.EditForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARM"
+        mc:Ignorable="d"
+        Title="Edit Record" Height="480" Width="449">
+    <Grid Margin="0,0,0,-6">
+        <WrapPanel x:Name="wrapPanel" Height="395" Width="339" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Choose ID" Width="159" Margin="5"/>
+            <ComboBox x:Name="idComboBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5" SelectionChanged="idComboBox_SelectionChanged"/>
+            <Label Content="Surname" Width="159" Margin="5"/>
+            <TextBox x:Name="surnameTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="Department" Width="159" Margin="5"/>
+            <TextBox x:Name="departmentTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="Birth Year" Width="159" Margin="5"/>
+            <TextBox x:Name="birthYearTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="Employment Year" Width="159" Margin="5"/>
+            <TextBox x:Name="employmentYearTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="Position" Width="159" Margin="5"/>
+            <TextBox x:Name="positionTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="Academic Degree" Width="159" Margin="5"/>
+            <TextBox x:Name="aDegreeTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="Academic Title" Width="159" Margin="5"/>
+            <TextBox x:Name="aTitleTextBox" Width="159" Height="30" VerticalAlignment="Center" Margin="5"/>
+            <Separator Width="328" Height="13" Margin="5"/>
+            <Button x:Name="saveChangesButton" Content="Save Changes" Height="30" Width="328" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="saveChangesButton_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>
