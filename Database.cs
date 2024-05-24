@@ -75,7 +75,7 @@ namespace ARM
                 return null;
             }
         }
-        public void UpdateRecordById(string id, Dictionary<string, string> updatedData)
+        public bool UpdateRecordById(string id, Dictionary<string, string> updatedData)
         {
             try
             {
@@ -102,11 +102,64 @@ namespace ARM
                 cmd.Parameters.AddWithValue("@id", id);
 
                 cmd.ExecuteNonQuery();
+                return true;
             }
             catch (Exception ex)
             {
                 // повідомлення про помилку
                 MessageBox.Show($"Error: {ex.Message}");
+                return false;
+            }
+        }
+
+        public bool AddRecord(Dictionary<string, string> newData)
+        {
+            try
+            {
+                using MySqlConnection conn = new MySqlConnection(_connectionString);
+                conn.Open();
+                string sql = "INSERT INTO employees (surname, department, birth_year, employment_year, position, academic_degree, academic_title) " +
+                             "VALUES (@Surname, @Department, @BirthYear, @EmploymentYear, @Position, @AcademicDegree, @AcademicTitle)";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Surname", newData["Surname"]);
+                cmd.Parameters.AddWithValue("@Department", newData["Department"]);
+                cmd.Parameters.AddWithValue("@BirthYear", newData["BirthYear"]);
+                cmd.Parameters.AddWithValue("@EmploymentYear", newData["EmploymentYear"]);
+                cmd.Parameters.AddWithValue("@Position", newData["Position"]);
+                cmd.Parameters.AddWithValue("@AcademicDegree", newData["AcademicDegree"]);
+                cmd.Parameters.AddWithValue("@AcademicTitle", newData["AcademicTitle"]);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // повідомлення про помилку
+                MessageBox.Show($"Error: {ex.Message}");
+                return false;
+            }
+        }
+
+        public bool DeleteRecordById(string id)
+        {
+            try
+            {
+                using MySqlConnection conn = new MySqlConnection(_connectionString);
+                conn.Open();
+                string sql = "DELETE FROM employees WHERE id = @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // повідомлення про помилку
+                MessageBox.Show($"Error: {ex.Message}");
+                return false;
             }
         }
 

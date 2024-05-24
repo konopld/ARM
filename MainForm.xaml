@@ -17,6 +17,8 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1" Margin="10">
             <Button x:Name="downloadButton" Content="Generate Report" Width="106" Margin="5" Click="downloadButton_Click" />
             <Button x:Name="editButton" Content="Edit" Width="51" Margin="5" Click="editButton_Click"/>
+            <Button x:Name="addButton" Content="Add" Width="51" Margin="5" Click="addButton_Click"/>
+            <Button x:Name="removeButton" Content="Remove" Width="51" Margin="5" Click="removeButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

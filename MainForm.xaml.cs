@@ -42,6 +42,8 @@ namespace ARM
             if (!app.CurrentUser.IsAdmin) {
                 // зробити недоступним редагування даних для звичайного користувача 
                 editButton.IsEnabled = false;
+                addButton.IsEnabled = false;
+                removeButton.IsEnabled = false;
             }
         }
 
@@ -129,6 +131,18 @@ namespace ARM
         {
             var editForm = new EditForm(dataGrid, _dbService);
             editForm.Show();
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            var addForm = new AddForm(dataGrid, _dbService);
+            addForm.Show();
+        }
+
+        private void removeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var removeForm = new RemoveForm(dataGrid, _dbService);
+            removeForm.Show();
         }
     }
 }
